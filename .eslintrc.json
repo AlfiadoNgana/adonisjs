@@ -4,7 +4,8 @@
     "es6": true,
     "node": true
   },
-  "extends": ["standard"],
+  "extends": ["standard", "prettier"],
+  "plugins": ["prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
@@ -13,5 +14,9 @@
   "parserOptions": {
     "ecmaVersion": 2018
   },
-  "rules": {}
+  "rules": {
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
+  }
 }
